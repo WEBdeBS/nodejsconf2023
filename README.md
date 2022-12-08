@@ -1,6 +1,6 @@
-# The Node.js Italian Conference 2022
+# The Node.js Italian Conference 2023
 
-This is the website of the Node.js Italian Conference 2022.
+This is the website of the Node.js Italian Conference 2023.
 
 ## Development
 
