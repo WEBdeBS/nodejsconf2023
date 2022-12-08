@@ -1,0 +1,26 @@
+{
+  "name": "nodejsconf2022",
+  "version": "0.1.0",
+  "description": "The Node.js Italian Conference 2022",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "rimraf ./dist && parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WEBdeBS/nodejsconf2022.git"
+  },
+  "keywords": [],
+  "author": "WEBdeBS <info@webdebs.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WEBdeBS/nodejsconf2022/issues"
+  },
+  "homepage": "https://github.com/WEBdeBS/nodejsconf2022#readme",
+  "devDependencies": {
+    "parcel": "latest",
+    "rimraf": "3.0.2"
+  }
+}
