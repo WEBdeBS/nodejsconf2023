@@ -6,7 +6,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel",
-    "build": "rimraf ./dist && parcel build",
+    "build": "rimraf ./dist && parcel build --public-url ./",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
