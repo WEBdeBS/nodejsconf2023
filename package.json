@@ -6,7 +6,8 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel",
-    "build": "rimraf ./dist && parcel build"
+    "build": "rimraf ./dist && parcel build",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/WEBdeBS/nodejsconf2022#readme",
   "devDependencies": {
+    "gh-pages": "4.0.0",
     "parcel": "latest",
     "rimraf": "3.0.2"
   }
