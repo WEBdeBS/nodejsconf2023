@@ -10,13 +10,13 @@ Clone this repo, `cd` in the cloned directory and install the required dependenc
 $ npm install
 ```
 
-The project uses [Parcel](https://parceljs.org/) to build the website. You can start the development mode with
+The project uses [eleventy](https://www.11ty.dev/) to build the website. You can start the development mode with
 
 ```sh
-$ npm start
+$ npm start  
 ```
 
-Navigate to http://localhost:1234 to get the website preview.
+Navigate to http://localhost:8080 to get the website preview.
 
 ## Build
 
