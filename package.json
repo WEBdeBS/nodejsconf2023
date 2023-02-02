@@ -21,8 +21,12 @@
   },
   "homepage": "https://github.com/WEBdeBS/nodejsconf2022#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
     "gh-pages": "4.0.0",
     "parcel": "latest",
     "rimraf": "3.0.2"
+  },
+  "dependencies": {
+    "eleventy-sass": "^2.1.7"
   }
 }

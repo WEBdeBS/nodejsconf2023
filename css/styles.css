@@ -11,9 +11,9 @@
 
 body {
   background-color: var(--dark);
-  background-image: url(assets/background_toplight.png),
+  background-image: url(../assets/background_toplight.png),
                     linear-gradient(rgba(0,0,0,0.12), rgba(0,0,0,0)),
-                    url(assets/background_tile.png);
+                    url(../assets/background_tile.png);
   background-repeat: no-repeat, repeat-x, repeat;
   background-position: center top, left top, left top;
   background-size: 1200px 375px, 100px 460px, 200px 200px;
