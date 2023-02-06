@@ -2,7 +2,7 @@
 
 module.exports = function(config) {
   config.addPassthroughCopy('src/assets')
-
+  config.addWatchTarget("./src/scss/");
   config.addLayoutAlias("base", "layouts/base.njk");
 
   return { 
