@@ -1,0 +1,12 @@
+{
+    "name": "nodejsconf2023",
+    "description": "website for the Node.js Italian Conference 2023",
+    "url": "",
+    "lang": "en",
+    "githubUrl": "https://github.com/WEBdeBS/nodejsconf2023",
+    "authorName": "WEBdeBS",
+    "authorHandle": "@webdebresa",
+    "authorEmail": "info@@webdebs.org",
+    "date": 2023,
+    "copyright": "2023"
+}

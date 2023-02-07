@@ -1,28 +1,52 @@
 {
-  "name": "nodejsconf2022",
+  "name": "nodejsconf2023",
   "version": "0.1.0",
-  "description": "The Node.js Italian Conference 2022",
+  "description": "The Node.js Italian Conference 2023",
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel",
-    "build": "rimraf ./dist && parcel build --public-url ./",
+    "start": "run-p serve:eleventy watch:parcel",
+    "serve:eleventy": "cross-env ELEVENTY_ENV=local eleventy --serve",
+    "watch:parcel": "run-p watch:css watch:js watch:images",
+    "watch:css": "parcel watch ./src/scss/main.scss --dist-dir ./dist/css",
+    "watch:js": "parcel watch ./src/js/main.js --dist-dir ./dist/js",
+    "watch:images": "parcel watch ./src/img/*",
+    "build": "run-s clean build:parcel build:eleventy",
+    "build:eleventy": "cross-env ELEVENTY_ENV=production eleventy",
+    "build:parcel": "run-p build:css build:js build:images",
+    "build:css": "parcel build ./src/scss/main.scss --dist-dir ./dist/css",
+    "build:js": "parcel build ./src/js/main.js --dist-dir ./dist/js",
+    "build:images": "parcel build src/assets/img/*",
+    "clean": "rm -rf dist",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WEBdeBS/nodejsconf2022.git"
+    "url": "git+https://github.com/WEBdeBS/nodejsconf2023.git"
   },
   "keywords": [],
   "author": "WEBdeBS <info@webdebs.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WEBdeBS/nodejsconf2022/issues"
+    "url": "https://github.com/WEBdeBS/nodejsconf2023/issues"
   },
-  "homepage": "https://github.com/WEBdeBS/nodejsconf2022#readme",
+  "homepage": "https://github.com/WEBdeBS/nodejsconf2023#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@parcel/transformer-sass": "^2.8.3",
+    "autoprefixer": "^10.4.2",
+    "cross-env": "^7.0.3",
     "gh-pages": "4.0.0",
-    "parcel": "latest",
-    "rimraf": "3.0.2"
+    "html-minifier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "nunjucks": "^3.2.3",
+    "parcel": "^2.2.1",
+    "postcss": "^8.4.5",
+    "sass": "^1.49.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.2",
+    "@webpixels/css": "^1.1.9",
+    "bootstrap": "^5.1.3"
   }
 }
