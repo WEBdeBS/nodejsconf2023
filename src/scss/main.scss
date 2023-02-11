@@ -36,7 +36,7 @@ ul.nav {
     a.nav-link{
       @extend %font1;
       font-size: 1em;
-      padding: $spacer/2;
+      padding: calc($spacer/2);
       &:hover {
         text-decoration:underline;
       }
