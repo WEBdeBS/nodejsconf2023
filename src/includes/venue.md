@@ -1,29 +1,3 @@
-# homepage - 
-
-
-## Intro 
-
-Behind this conference there is WEBdeBS - the name stands for Web Developers Brescia, the city in Italy we all come from - a group of people sharing a strong passion for everything related to the web (but not only). 
-
-
-We meet from time to time to talk about software, software development, frameworks, programming, web/mobile and client/server technologies, and social media communication. Geek’s talk basically! (but not only). 
-
-Sometimes we meet to share presentations, some other to chat till night, drinking a pirlo (a typical local drink) or a beer.
-
-This conference is born with this spirit : **not strictly a commercial or promotional event, but rather a gathering organized using time, passion and willingness taken away from our daily working life.**
-
-
-**From the community for the community.**
-
-## Call-for-papers (closes ???)
-We can’t wait to receive your Nodejs speech proposal with real use cases, applications, common pitfalls or best practices.
-
-So if you think you have something to say get in contact with us and submit your paper via ??
-
-## Tickets
-
-Evenbrite frame?
-
 ## The venue
 Centro Pastorale Paolo VI a BresciaThe conference will be held at Centro Paolo VI in Brescia, a large and modern congress center located within a beautiful palace from the 1500, close to the city historical center.
 
@@ -52,14 +26,3 @@ We concluded agreements with some hotels in Brescia in order to have special pri
 ## Map
 
 ## How to get there
-
-
-
-## Follow us
-
-- twitter
-
-
-## Contacts
-
-email?

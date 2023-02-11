@@ -11,21 +11,10 @@
         <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
     </head>
     <body>
-        <div id="app">
-
-            <!-- Header -->
-            {% include "partials/header.njk" %}
-
-            <!-- Main container -->
-            <div id="main-container" role="document">
-                <main role="main">
-                    {{ content | safe }}
-                </main>
-            </div>
-
-            <!-- Footer -->
-            {% include "partials/footer.njk" %}
-        </div>
+        <!-- Main container -->
+        <main role="main" class="container py-3">
+            {{ content | safe }}
+        </main>
 
         <script src="{{ '/js/main.js' | url }}"></script>
     </body>
