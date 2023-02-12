@@ -93,11 +93,11 @@ section {
 }
 
 
-
-.card {
-  background-color: shade-color($dark, 10%);
+#sponsor {
+  [class*="col-"] > div {
+    background-color: shade-color($dark, 40%);
+  }
 }
-
 
 
 
