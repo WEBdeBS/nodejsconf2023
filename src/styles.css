@@ -1,0 +1,46 @@
+@import url('https://unpkg.com/reset-css/reset.css');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+:root {
+  --dark: #22252A;
+  --default: #999999;
+  --light: #CCCCCC;
+  --white: #E6E6E6;
+  --accent: #B9C949; 
+}
+
+body {
+  background-color: var(--dark);
+  background-image: url(assets/background_toplight.png),
+                    linear-gradient(rgba(0,0,0,0.12), rgba(0,0,0,0)),
+                    url(assets/background_tile.png);
+  background-repeat: no-repeat, repeat-x, repeat;
+  background-position: center top, left top, left top;
+  background-size: 1200px 375px, 100px 460px, 200px 200px;
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: minmax(auto, 1200px);
+  justify-content: center;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.logo {
+  grid-area: header;
+  align-self: center;
+  margin: 5% 15%;
+}
+
+h1 {
+  color: var(--accent);
+  letter-spacing: 1;
+  font-family: 'League Gothic', sans-serif;
+}
