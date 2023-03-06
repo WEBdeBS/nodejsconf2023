@@ -16,7 +16,11 @@ module.exports = function(config) {
   });
 
   config.addCollection("sponsor_packages",(collection) => {
-    return collection.getFilteredByGlob("./src/content/sponsor_packages/*.md");
+    return collection
+    .getFilteredByGlob("./src/content/sponsor_packages/*.md")
+    .sort((a, b) => {
+      return a.data.weight - b.data.weight;
+    })
   });
 
   /*

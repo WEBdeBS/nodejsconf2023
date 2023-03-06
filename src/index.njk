@@ -40,6 +40,7 @@ permalink: '/'
 
 <section id="cfp">
   {% renderFile "./src/includes/cfp.md" %}
+  <a href="https://docs.google.com/forms/d/1qWxi6NRLyoroqqy3w7bDyGilO0QdN-xsTc6r4SHAx9Q/edit" class="btn btn-primary btn-lg">Submit your proposal</a>
 </section>
 
 
@@ -78,6 +79,10 @@ permalink: '/'
     <div class="col-12 col-md-6 col-lg-3 g-2">
       <div class="p-3 rounded h-100">
         <h3 >{{ post.data.title }}</h3>
+        <div class="price">
+          <div class="fs-3">{{ post.data.price }} &euro;</div> 
+        </div>
+        <hr>
         {{ post.templateContent | safe }}
       </div>
     </div>

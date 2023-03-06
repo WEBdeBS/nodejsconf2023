@@ -1,5 +1,7 @@
 ---
 title: Gold supporter
+price: 1000
+weight: 2
 ---
 
 *   Logo on the website and conference rollup.

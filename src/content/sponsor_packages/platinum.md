@@ -1,5 +1,7 @@
 ---
 title: Platinum 
+price: 2000
+weight: 1
 ---
 
 * Logo on the website and conference rollup.
