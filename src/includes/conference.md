@@ -7,4 +7,3 @@ Sometimes we meet to share presentations, some other to chat till night, drinkin
 This conference is born with this spirit: **not strictly a commercial or promotional event, but rather a gathering organized using time, passion and willingness taken away from our daily working life.**
 
 **From the community for the community.**
-POTA CIAO
