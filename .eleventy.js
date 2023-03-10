@@ -1,9 +1,36 @@
 // inspired by https://github.com/webpixels/bootstrap-starter-kit
 
+const markdownIt = require("markdown-it");
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
+
 module.exports = function(config) {
   config.addPassthroughCopy('src/assets')
-  config.addWatchTarget("./src/scss/");
-  config.addLayoutAlias("base", "layouts/base.njk");
+  config.addWatchTarget("./src/");
+  config.addWatchTarget("./src/scss");
+  config.addLayoutAlias("layout1", "layout1.njk");
+
+  config.addPlugin(EleventyRenderPlugin);
+
+  config.addCollection("talks",(collection) => {
+    return collection.getFilteredByGlob("./src/content/talks/*.md");
+  });
+
+  config.addCollection("sponsor_packages",(collection) => {
+    return collection
+    .getFilteredByGlob("./src/content/sponsor_packages/*.md")
+    .sort((a, b) => {
+      return a.data.weight - b.data.weight;
+    })
+  });
+
+  /*
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  config.setLibrary("md", markdownIt(options));
+  */
 
   return { 
     dir: {
@@ -11,10 +38,10 @@ module.exports = function(config) {
       output: "dist",
       includes: "includes",
       data: "data",
-    },
+          },
     templateFormats: ["html", "njk", "md", "11ty.js"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
-    passthroughFileCopy: true
+    //passthroughFileCopy: true
   };
 }

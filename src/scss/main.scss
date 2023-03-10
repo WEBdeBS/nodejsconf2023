@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+$spacer: 1rem;
+$primary: #689f63;
+$secondary: #9cd197; 
+$light: #CCCCCC;
+$white: #E6E6E6;
+$dark: #22252A;
+
+$font-family1: 'League Gothic', sans-serif;
+
+$body-color: $light;
+$h1-color: $primary;
+
+@import "bootstrap/scss/bootstrap";
+
+
+body {
+  background-image: url(../assets/background_toplight.png),
+                    linear-gradient(rgba(0,0,0,0.12), rgba(0,0,0,0)),
+                    url(../assets/background_tile.png);
+  background-repeat: no-repeat, repeat-x, repeat;
+  background-position: center top, left top, left top;
+  background-size: 1200px 375px, 100px 460px, 200px 200px;
+}
+
+
+%font1 {
+  color: $primary;
+  letter-spacing: 2;
+  font-family: $font-family1;
+}
+
+ul.nav {
+  .nav-item {
+    a.nav-link{
+      @extend %font1;
+      font-size: 1em;
+      padding: calc($spacer/2);
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  @extend %font1;
+}
+
+h2 {
+  color: $white;
+}
+
+h5 {
+  font-variant: small-caps;
+}
+
+strong {
+  color: $white;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  :visited {
+    color: $secondary;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+p {
+  :last-child {
+    margin-bottom: 0rem;
+  }
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.logo {
+  margin: 5% 15%;
+  flex:1
+}
+
+.webdebs-logo {
+  border-radius: 4px;
+  background-color: $white;
+  padding: 20px 10px;
+}
+
+
+#sponsor {
+  [class*="col-"] > div {
+    background-color: shade-color($dark, 40%);
+  }
+}
+
+
+
+@media only screen and (min-width: map-get($grid-breakpoints, md)){
+  ul.nav {
+    .nav-item {
+      a.nav-link{
+        padding: calc($spacer*2);
+        font-size: 2em;
+      }
+    }
+  }
+  .webdebs-logo {
+    transform: rotate(-15deg);
+    margin-bottom: 50px;
+  }
+}

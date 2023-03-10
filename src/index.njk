@@ -1,0 +1,148 @@
+---
+layout: layout1
+title: Home
+permalink: '/'
+---
+
+
+<header>
+  <div class="d-flex flex-column flex-md-row align-items-center">
+    <img src="assets/logo.svg" class="logo" />
+  </div>
+  <ul class="nav justify-content-center pb-3 mb-4">
+    <li class="nav-item">
+      <a class="nav-link text-nowrap" href="#conference">The Conference</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-nowrap" href="#cfp">Call for Paper</a>
+    </li>
+    <!-- <li class="nav-item"><a class="nav-link" href="#agenda">Agenda</a></li> -->
+    <!-- <li class="nav-item"><a class="nav-link" href="#venue">The venue</a></li> -->
+    <!-- <li class="nav-item"><a class="nav-link" href="#tickets">Tickets</a></li> -->
+    <li class="nav-item">
+      <a class="nav-link  text-nowrap" href="#coc">Code of Conduct</a>
+    </li>
+  </ul>
+</header>
+
+<section id="conference" class="row">
+  <h1>The international Nodejs Conference in Italy 🇮🇹 </h1>
+  <h4> 30th September 2023 - Brescia, Italy</h4>
+  <div class="row">
+    <div class="col-12"> 
+      <figure class="figure float-md-end m-3">
+          <img src="/assets/logo_webdebs_basic_black.png" class="img-fluid webdebs-logo figure-img " alt="The WEBdeBS logo">
+          <!-- <figcaption class="figure-caption text-center">Visible text.</figcaption> -->
+      </figure>
+      {% renderFile "./src/includes/conference.md" %}
+    </div>
+  </div>
+</section>
+
+<section id="cfp">
+  {% renderFile "./src/includes/cfp.md" %}
+  <a href="https://docs.google.com/forms/d/1qWxi6NRLyoroqqy3w7bDyGilO0QdN-xsTc6r4SHAx9Q/edit" class="btn btn-primary btn-lg">Submit your proposal</a>
+</section>
+
+<section id="venue">
+  {% renderFile "./src/includes/venue.md" %}
+</section>
+
+<section id="tickets">
+  {% renderFile "./src/includes/tickets.md" %}
+</section>
+{#
+<section id="to-be-defined">
+  <div class="row">
+    <div class="col">
+      <h1>Agenda, Venue, Tickets</h1>
+      <p>To be defined</p>
+    </div>
+  </div>
+</section>
+#}
+
+{#
+<section id="talks">
+  <div class="row px-2">
+  {%- for talk in collections.talks -%}
+    <div class="col-4">
+      <h3>{{ talk.data.title }}</h3>
+      <div class="bio mb-2">
+        {{ talk.data.bio | safe }}
+      </div>
+      <div class="description">
+        {{ talk.templateContent | safe }}
+      </div>
+    </div>
+  {%- endfor -%}
+  </div>
+</section> 
+#}
+
+<section id="sponsor" class="">
+  {% renderFile "./src/includes/sponsor.md" %}
+
+  <div class="row">
+  {%- for post in collections.sponsor_packages -%}
+    <div class="col-12 col-md-6 col-lg-3 g-2">
+      <div class="p-3 rounded h-100">
+        <h3 >{{ post.data.title }}</h3>
+        <div class="price">
+          <div class="fs-3">{{ post.data.price }} &euro;</div> 
+        </div>
+        <hr>
+        {{ post.templateContent | safe }}
+      </div>
+    </div>
+  {%- endfor -%}
+  </div>
+</section>
+
+
+<section id="coc">
+  {% renderFile "./src/includes/coc.md" %}
+</section>
+
+
+<section id="follow-us">
+  <h1> 👀 Follow us</h1>
+  <div class="row row-cols-auto">
+    <div class="col">
+      <a href="https://twitter.com/webdebresa">
+        <i class="bi bi-twitter"></i> Twitter
+      </a>
+    </div>
+    <div class="col">
+      <a href="https://facebook.com/webdebs">
+        <i class="bi bi-facebook"></i> Facebook
+      </a>
+    </div>
+    <div class="col">
+      <a href="https://webdebs.eventbrite.com">
+        <i class="bi bi-calendar-event"></i> Eventbrite
+      </a>
+    </div>
+    <!-- div class="col">
+      <a href="http://slack.webdebs.org">
+        <i class="bi bi-slack"></i> Slack
+      </a>
+    </div> -->
+    </div>
+</section>
+
+
+<section id="contacts">
+  <h1> 🤙 Contacts</h1>
+  <div class="row row-cols-auto">
+    <div class="col">
+      <a href="http://webdebs.org"><i class="bi bi-globe"></i> Website </a>
+    </div>
+    <div class="col">
+      <a href="mailto:info@webdebs.org">
+        <i class="bi bi-envelope"></i> Email
+      </a>
+    </div>
+  </div>
+</section>
+
