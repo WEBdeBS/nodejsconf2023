@@ -1,4 +1,4 @@
-Call for Paper
+✍️ Call for Paper
 ==============
 
 We can't wait to receive your Nodejs speech proposal with real use cases, applications, common pitfalls or best practices. 
