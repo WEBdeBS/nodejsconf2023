@@ -1,4 +1,4 @@
-# Code of Conduct
+# 🤲 Code of Conduct
 
 Nodejsconf is a community conference intended for networking and collaboration in the developer community. We value the participation of each member of the community and want all attendees to have an enjoyable and fulfilling experience.
 

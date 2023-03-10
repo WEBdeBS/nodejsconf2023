@@ -1,4 +1,4 @@
-Behind this conference there is WEBdeBS - the name stands for Web Developers Brescia, the city in Italy we all come from - a group of people sharing a strong passion for everything related to the web (but not only).
+Behind this conference there is WEBdeBS - the name stands for Web Developers Brescia, the city in Italy where most of us come from - a group of people sharing a strong passion for everything related to the web (but not only).
 
 We meet from time to time to talk about software, software development, frameworks, programming, web/mobile and client/server technologies, and social media communication. Geek's talk basically! (but not only).
 
