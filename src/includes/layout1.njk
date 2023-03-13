@@ -30,10 +30,43 @@
         <link rel="stylesheet" href="{{ '/css/main.css' }}">
     </head>
     <body>
-        <!-- Main container -->
         <main role="main" class="container py-3">
             {{ content | safe }}
         </main>
-        <script src="{{ '/js/main.js' }}"></script>
+        <!-- iubenda -->
+        <script type="text/javascript">
+            var _iub = _iub || [];
+            _iub.csConfiguration = {
+                "askConsentAtCookiePolicyUpdate": true,
+                "floatingPreferencesButtonDisplay": "bottom-right",
+                "lang": "en",
+                "perPurposeConsent": true,
+                "siteId": 3033025,
+                "whitelabel": false,
+                "cookiePolicyId": 66583400,
+                "banner": {
+                    "acceptButtonDisplay": true,
+                    "closeButtonDisplay": false,
+                    "customizeButtonDisplay": true,
+                    "explicitWithdrawal": true,
+                    "listPurposes": true,
+                    "position": "float-top-center",
+                    "rejectButtonDisplay": true,
+                    "showPurposesToggles": true
+                }
+            };
+        </script>
+        <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL1LEB76NZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-HL1LEB76NZ');
+        </script>
+        <script src="{{ '/js/main.js' | url }}"></script>
     </body>
 </html>
