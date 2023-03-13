@@ -3,6 +3,7 @@
 const markdownIt = require("markdown-it");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
+
 module.exports = function(config) {
   config.addPassthroughCopy('src/assets')
   config.addWatchTarget("./src/");
@@ -37,8 +38,9 @@ module.exports = function(config) {
       input: "src",
       output: "dist",
       includes: "includes",
-      data: "data",
-          },
+      //data: "data", // relative to input
+    },
+    site: {},
     templateFormats: ["html", "njk", "md", "11ty.js"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
