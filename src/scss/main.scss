@@ -101,6 +101,11 @@ section {
 }
 
 
+#map-venue {
+  height: 500px;
+  width: 100%;
+}
+
 
 @media only screen and (min-width: map-get($grid-breakpoints, md)){
   ul.nav {
