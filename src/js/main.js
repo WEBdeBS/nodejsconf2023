@@ -18,8 +18,8 @@ function initMap(){
         Via Nazario Sauro, 29, 25015<br>
         Desenzano del Garda BS
       </div>
-      <div class="email mb-1"><a href="mailto:info@hoteldesenzano.it">info@hoteldesenzano.it</a></div>
       <div class="phone mb-1"><a href="tel:+39 030 9141414">+39 030 9141414</a></div>
+      <div class="email mb-1"><a href="mailto:info@hoteldesenzano.it">info@hoteldesenzano.it</a></div>
       <div class="website mb-3"><a target="_blank" href="https://hoteldesenzano.it/">https://hoteldesenzano.it</a></div>
 
       <a target="_blank" href="https://www.google.com/maps/place/Hotel+Desenzano/@45.4640236,10.5340366,17z/data=!4m13!1m2!2m1!1sHotel+Desenzano+Viale+Cavour,+40%2F42,+25015+Desenzano+del+Garda+BS%E2%80%A2030+914+1414!3m9!1s0x4781944f67d390b5:0x144967ddcd5953e9!5m2!4m1!1i2!8m2!3d45.4640236!4d10.5362253!15sClBIb3RlbCBEZXNlbnphbm8gVmlhbGUgQ2F2b3VyLCA0MC80MiwgMjUwMTUgRGVzZW56YW5vIGRlbCBHYXJkYSBCU-KAojAzMCA5MTQgMTQxNJIBBWhvdGVs4AEA!16s%2Fg%2F1td31x9_">
