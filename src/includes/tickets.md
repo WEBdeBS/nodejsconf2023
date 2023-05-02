@@ -1,7 +1,10 @@
 🎟️ Tickets
 ==============
 
-<div id="eventbrite-widget-container-620585155907"></div>
+<!-- Noscript content for added SEO -->
+<noscript><a href="https://www.eventbrite.it/e/italian-nodejs-conference-2023-tickets-620585155907" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+<!-- You can customize this button any way you like -->
+<button id="eventbrite-widget-modal-trigger-620585155907" class="btn btn-primary btn-lg" type="button">Buy Tickets</button>
 
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 
@@ -11,14 +14,10 @@
     };
 
     window.EBWidgets.createWidget({
-        // Required
         widgetType: 'checkout',
         eventId: '620585155907',
-        iframeContainerId: 'eventbrite-widget-container-620585155907',
-
-        // Optional
-        // no scroll at 690
-        iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
-        onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-620585155907',
+        onOrderComplete: exampleCallback
     });
 </script>
