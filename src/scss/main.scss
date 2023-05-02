@@ -82,9 +82,11 @@ section {
   margin-bottom: 3rem;
 }
 
-.logo {
-  margin: 5% 15%;
-  flex:1
+#logo-link {
+  .logo {
+    margin: 5% 15%;
+    flex:1
+  }
 }
 
 .webdebs-logo {
@@ -100,6 +102,11 @@ section {
   }
 }
 
+
+#map-venue {
+  height: 500px;
+  width: 100%;
+}
 
 
 @media only screen and (min-width: map-get($grid-breakpoints, md)){
