@@ -31,6 +31,24 @@
     </head>
     <body>
         <main role="main" class="container py-3">
+            <header>
+                <a id="logo-link" href="/" class="d-flex flex-column flex-md-row align-items-center">
+                    <img src="assets/logo.svg" class="logo image-fluid"/>
+                </a>
+                <ul class="nav justify-content-center pb-3 mb-4">
+                    <li class="nav-item">
+                    <a class="nav-link text-nowrap" href="/#conference">The Conference</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-nowrap" href="/#cfp">Call for Paper</a>
+                    </li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#agenda">Agenda</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#venue">The venue</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#tickets">Tickets</a></li> -->
+                    <li class="nav-item"> <a class="nav-link  text-nowrap" href="/code-of-conduct.html">Code of Conduct</a>
+                    </li>
+                </ul>
+            </header>
             {{ content | safe }}
         </main>
         <!-- iubenda -->

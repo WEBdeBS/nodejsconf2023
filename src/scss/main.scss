@@ -82,9 +82,11 @@ section {
   margin-bottom: 3rem;
 }
 
-.logo {
-  margin: 5% 15%;
-  flex:1
+#logo-link {
+  .logo {
+    margin: 5% 15%;
+    flex:1
+  }
 }
 
 .webdebs-logo {
