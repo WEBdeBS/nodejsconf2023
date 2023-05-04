@@ -9,6 +9,5 @@ Great idea! You will contribute to the success of an event that is unique in Ita
     Get in touch with us <i class="bi bi-envelope"></i>
 </a>
 
-Packages
 --------
 
