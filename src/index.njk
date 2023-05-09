@@ -33,7 +33,7 @@ permalink: '/'
 
   <section id="cfp" class='cfp'>
     {% renderFile "./src/includes/cfp.md" %}
-    <a
+    <a class="link-button"
       href="https://docs.google.com/forms/d/1qWxi6NRLyoroqqy3w7bDyGilO0QdN-xsTc6r4SHAx9Q/edit"
      >Submit your proposal</a>
   </section>
@@ -81,6 +81,39 @@ permalink: '/'
           </div>
         {%- endfor -%}
       </div>
+    </section>
+
+    <section class="our-sponsor">
+      <h1> Our amazing sponsors </h1>
+      <p> Thanking those who make it all possible. <br> Join our cause: become one of our amazing sponsors! </p>
+      <div class="gird-sponsor">
+
+        <!--  ---- MAIN SPONSOR  ---- -->
+        <a href="https://thenativeweb.io/" target="_blank">
+          <div class="sponsor-image">
+            <img src="./assets/sponsor/logo-the-native-web.svg"> </img>
+            <div class="badge"> Platinum </div>
+          </div>
+        </a>
+    
+        <a href="https://platformatic.dev/" target="_blank">
+          <div class="sponsor-image">
+            <img src="./assets/sponsor/patformatic.svg"> </img>
+            <div class="badge"> Platinum </div>
+          </div>
+        </a>
+    
+        <!-- ---- SMALL SPONSOR ---- -->
+        
+        <!-- <a href="https://platformatic.dev/" target="_blank">
+          <div class="sponsor-image-small">
+            <img src="./assets/sponsor/patformatic.svg"> </img>
+            <div class="badge"> Bronze </div>
+          </div>
+        </a> -->
+  
+      </div>
+      <a class="link-button" href="mailto:info@webdebs.org?subject=Sponsorship request">Become a sponsor</a>
     </section>
 
     <div class='banner mt-24'></div>
