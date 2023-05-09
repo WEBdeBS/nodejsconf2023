@@ -19,10 +19,15 @@ module.exports = function(config) {
   config.addCollection("sponsor_packages",(collection) => {
     return collection
     .getFilteredByGlob("./src/content/sponsor_packages/*.md")
-    .sort((a, b) => {
-      return a.data.weight - b.data.weight;
-    })
+    .sort((a, b) => a.data.weight - b.data.weight)
   });
+
+  config.addCollection("sponsors",(collection) => {
+    return collection
+    .getFilteredByGlob("./src/content/sponsors/*.md")
+    .sort((a, b) => a.data.weight - b.data.weight)
+  });
+
 
   /*
   let options = {
