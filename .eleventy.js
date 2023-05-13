@@ -24,6 +24,13 @@ module.exports = function(config) {
     })
   });
 
+  config.addCollection("sponsors",(collection) => {
+    return collection
+    .getFilteredByGlob("./src/contents/sponsors/*.md")
+    .sort((a, b) => a.data.weight - b.data.weight)
+  });
+
+
   /*
   let options = {
     html: true,
