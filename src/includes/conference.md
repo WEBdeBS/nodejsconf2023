@@ -1,7 +1,6 @@
-The Italian Nodejsconf **is back!**
-
 Behind this conference there is WEBdeBS - the name stands for Web Developers Brescia, the city in Italy where most of us come from - a group of people sharing a strong passion for everything related to the web (but not only).
 
-This conference is born with this spirit: **not strictly a commercial or promotional event, but rather a gathering organized using time, passion and willingness taken away from our daily working life.**
+This conference is born with this spirit: <p class='important'>Not strictly a commercial or promotional event, but rather a gathering organized using time, passion and willingness taken away from our daily working life.
+<p>
 
-**From the community for the community.**
+From the community for the community.

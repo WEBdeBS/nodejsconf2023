@@ -1,4 +1,4 @@
-✍️ Call for Paper
+Call for Paper (closes the 15th of June)
 ==============
 
 We can't wait to receive your Nodejs speech proposal with real use cases, applications, common pitfalls or best practices. 

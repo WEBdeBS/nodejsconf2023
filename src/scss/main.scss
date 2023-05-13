@@ -1,29 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
 
 $spacer: 1rem;
 $primary: #689f63;
-$secondary: #9cd197; 
-$light: #CCCCCC;
-$white: #E6E6E6;
-$dark: #22252A;
+$secondary: #9cd197;
+$light: #cccccc;
+$white: #e6e6e6;
+$dark: #22252a;
 
-$font-family1: 'League Gothic', sans-serif;
+$font-family1: "League Gothic", sans-serif;
 
 $body-color: $light;
 $h1-color: $primary;
 
 @import "bootstrap/scss/bootstrap";
 
-
 body {
   background-image: url(../assets/background_toplight.png),
-                    linear-gradient(rgba(0,0,0,0.12), rgba(0,0,0,0)),
-                    url(../assets/background_tile.png);
+    linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0)),
+    url(../assets/background_tile.png);
   background-repeat: no-repeat, repeat-x, repeat;
   background-position: center top, left top, left top;
   background-size: 1200px 375px, 100px 460px, 200px 200px;
+  overflow-x: hidden;
+  padding-bottom: 100px;
 }
-
 
 %font1 {
   color: $primary;
@@ -33,23 +33,37 @@ body {
 
 ul.nav {
   .nav-item {
-    a.nav-link{
+    a.nav-link {
       @extend %font1;
       font-size: 1em;
       padding: calc($spacer/2);
       &:hover {
-        text-decoration:underline;
+        text-decoration: underline;
       }
     }
   }
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   @extend %font1;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 h2 {
   color: $white;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+}
+
+.mt-40 {
+  margin-top: 10rem;
 }
 
 h5 {
@@ -71,8 +85,8 @@ a {
   }
 }
 
-
-p {
+* {
+  font-weight: 200;
   :last-child {
     margin-bottom: 0rem;
   }
@@ -82,9 +96,11 @@ section {
   margin-bottom: 3rem;
 }
 
-.logo {
-  margin: 5% 15%;
-  flex:1
+#logo-link {
+  .logo {
+    margin: 5% 15%;
+    flex: 1;
+  }
 }
 
 .webdebs-logo {
@@ -93,20 +109,23 @@ section {
   padding: 20px 10px;
 }
 
-
 #sponsor {
   [class*="col-"] > div {
     background-color: shade-color($dark, 40%);
   }
 }
 
+#map-venue {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+}
 
-
-@media only screen and (min-width: map-get($grid-breakpoints, md)){
+@media only screen and (min-width: map-get($grid-breakpoints, md)) {
   ul.nav {
     .nav-item {
-      a.nav-link{
-        padding: calc($spacer*2);
+      a.nav-link {
+        padding: calc($spacer * 2);
         font-size: 2em;
       }
     }
@@ -115,4 +134,161 @@ section {
     transform: rotate(-15deg);
     margin-bottom: 50px;
   }
+}
+
+.price-card {
+  border-radius: 1.5rem;
+  height: 100%;
+  ul {
+    list-style-image: url(../assets/check-icon.svg);
+    margin-right: 10px;
+
+    li {
+      margin: 10px 0;
+      padding-left: 10px;
+    }
+  }
+}
+
+.grid-colum {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 3rem;
+  margin-bottom: 30px;
+}
+
+.conference-section {
+  grid-gap: 6rem !important;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 3rem;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: map-get($grid-breakpoints, md)) {
+  .grid-colum {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: map-get($grid-breakpoints, lg)) {
+  .conference-section {
+    grid-gap: 6rem !important;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.important {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.color-card {
+  border: 1px solid;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  li {
+    margin: 10px 0;
+  }
+  .title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  }
+}
+
+.green {
+  border-color: #689f63;
+  span {
+    color: #689f63;
+    font-weight: 300;
+  }
+}
+
+.red {
+  border-color: #c23535;
+  span {
+    color: #c23535;
+    font-weight: 300;
+  }
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+.mb-24 {
+  margin-bottom: 6rem;
+}
+
+.mt-96 {
+  margin-top: 24rem;
+}
+
+.mt-0{
+  margin-top: 0 !important;
+}
+
+.cfp {
+  text-align: center;
+  margin: 200px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin-bottom: 30px;
+    max-width: 500px;
+  }
+  a {
+    text-transform: uppercase;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid #689f63;
+    border-radius: 2rem;
+  }
+  a:hover {
+    background-color: #689f63;
+    color: white;
+  }
+}
+
+.btn-custom {
+  text-transform: uppercase;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid #689f63;
+  border-radius: 2rem;
+  background: none;
+  color: #689f63;
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 50px;
+}
+.btn-custom:hover {
+  background-color: #689f63;
+  color: white;
+}
+
+.banner {
+  background-image: url(../assets/webdebs-banner.png);
+  height: 120px;
+  background-repeat: repeat-x;
+  width: 110vw;
+  position: absolute;
+  left: -20px;
+  transform: rotate(-5deg);
+  margin: 20px 0;
+  z-index: 200;
+}
+
+.mr-2{
+  margin-right: 0.5rem
+}
+
+.small-col{
+  max-width: 850px;
+  margin: 0 auto;
 }
