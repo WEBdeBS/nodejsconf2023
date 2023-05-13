@@ -35,7 +35,8 @@ permalink: '/'
     {% renderFile "./src/contents/cfp.md" %}
     <a
       href="https://docs.google.com/forms/d/1qWxi6NRLyoroqqy3w7bDyGilO0QdN-xsTc6r4SHAx9Q/edit"
-     >Submit your proposal</a>
+      class="link-button"
+    >Submit your proposal</a>
   </section>
 
   {#
@@ -81,6 +82,22 @@ permalink: '/'
           </div>
         {%- endfor -%}
       </div>
+    </section>
+
+    <section class="our-sponsor">
+      {% renderFile "./src/contents/sponsors.md" %}
+      <div class="grid-sponsor mb-4">
+        {%- for sponsor in collections.sponsors -%}
+          <a href="{{ sponsor.data.url }}" target="_blank">
+            <div class="sponsor-image">
+              <img src="{{ sponsor.data.image }}"> </img>
+              <div class="badge">{{ sponsor.data.package }}</div>
+            </div>
+          </a>
+        {%- endfor -%}
+  
+      </div>
+      <a class="link-button" href="mailto:info@webdebs.org?subject=Sponsorship request">Become a sponsor</a>
     </section>
 
     <div class='banner mt-24'></div>
