@@ -164,6 +164,10 @@ section {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 3rem;
   margin-bottom: 30px;
+
+  blockquote{
+    font-style: italic;
+  }
 }
 
 @media only screen and (min-width: map-get($grid-breakpoints, md)) {
@@ -178,11 +182,6 @@ section {
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-.important {
-  font-size: 2rem;
-  font-weight: 200;
 }
 
 .color-card {
