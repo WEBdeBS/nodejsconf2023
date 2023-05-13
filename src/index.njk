@@ -84,9 +84,8 @@ permalink: '/'
     </section>
 
     <section class="our-sponsor">
-      {% renderFile "./src/includes/sponsors.md" %}
-      <div class="gird-sponsor">
-
+      {% renderFile "./src/contents/sponsors.md" %}
+      <div class="grid-sponsor mb-4">
         {%- for sponsor in collections.sponsors -%}
           <a href="{{ sponsor.data.url }}" target="_blank">
             <div class="sponsor-image">
