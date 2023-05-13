@@ -16,13 +16,13 @@ permalink: '/'
     30th September 2023 - Brescia, Italy</h4>
     <div class="row">
       <div class='conference-section'> 
-        <div> {% renderFile "./src/includes/conference.md" %} </div>
+        <div> {% renderFile "./src/contents/conference.md" %} </div>
         <div> 
           <section id="venue">
-            {% renderFile "./src/includes/venue.md" %}
+            {% renderFile "./src/contents/venue.md" %}
           </section>
           <section id="tickets">
-            {% renderFile "./src/includes/tickets-disabled.md" %}
+            {% renderFile "./src/contents/tickets-disabled.md" %}
           </section>
         
       </div>
@@ -32,7 +32,7 @@ permalink: '/'
   <div id="map-venue"></div> 
 
   <section id="cfp" class='cfp'>
-    {% renderFile "./src/includes/cfp.md" %}
+    {% renderFile "./src/contents/cfp.md" %}
     <a
       href="https://docs.google.com/forms/d/1qWxi6NRLyoroqqy3w7bDyGilO0QdN-xsTc6r4SHAx9Q/edit"
      >Submit your proposal</a>
@@ -66,7 +66,7 @@ permalink: '/'
       </section> 
       #}
   <section id="sponsor" class="mb-24">
-    {% renderFile "./src/includes/sponsor.md" %}
+    {% renderFile "./src/contents/sponsor.md" %}
     <div class="row">
       {%- for post in collections.sponsor_packages -%}
         <div class="col-12 col-md-6 col-lg-3 g-4">
