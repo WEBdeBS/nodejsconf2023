@@ -286,6 +286,9 @@ section {
 .our-sponsor {
   text-align: center;
   margin: 100px 0;
+  a {
+    text-decoration: none;
+  }
   .sponsor-image,
   .sponsor-image-small {
     // background-color: #141619;
