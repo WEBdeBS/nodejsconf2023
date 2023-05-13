@@ -88,7 +88,7 @@ permalink: '/'
       <div class="gird-sponsor">
 
         {%- for sponsor in collections.sponsors -%}
-          <a href="{{ post.data.url }}" target="_blank">
+          <a href="{{ sponsor.data.url }}" target="_blank">
             <div class="sponsor-image">
               <img src="{{ sponsor.data.image }}"> </img>
               <div class="badge">{{ sponsor.data.package }}</div>
