@@ -2,6 +2,6 @@
 name: Platformatic
 url: https://platformatic.dev/
 image: ./assets/sponsors/platformatic.svg
-package: platinum
+level: platinum
 weight: 0
 ---
