@@ -95,7 +95,16 @@ permalink: '/'
             </div>
           </a>
         {%- endfor -%}
-  
+      </div>
+      <div id="sponsors-silver" class="sponsor-level mb-4">
+        {%- for sponsor in collections.sponsors_silver -%}
+          <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor sponsor-level-{{sponsor.data.level}}">
+            <div class="sponsor-image">
+              <img src="{{ sponsor.data.image }}"> </img>
+              <div class="badge">{{ sponsor.data.level }}</div>
+            </div>
+          </a>
+        {%- endfor -%}
       </div>
       <a class="link-button" href="mailto:info@webdebs.org?subject=Sponsorship request">Become a sponsor</a>
     </section>
