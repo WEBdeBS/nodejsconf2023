@@ -24,9 +24,10 @@ module.exports = function(config) {
     })
   });
 
-  config.addCollection("sponsors",(collection) => {
+  config.addCollection("sponsors_platinum",(collection) => {
     return collection
     .getFilteredByGlob("./src/contents/sponsors/*.md")
+    .filter(s => s.data.level == "platinum")
     .sort((a, b) => a.data.weight - b.data.weight)
   });
 

@@ -50,3 +50,12 @@ function initMap(){
 }
 
 window.initMap = initMap;
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".sponsor-level").forEach((level)=> {
+    const sponsors = Array.from(level.querySelectorAll(".sponsor")).sort(() => Math.random() - 0.5);
+    level.innerHTML = '';
+    sponsors.forEach(s => level.appendChild(s))
+  });
+});

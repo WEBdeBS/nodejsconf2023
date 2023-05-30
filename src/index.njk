@@ -16,13 +16,13 @@ permalink: '/'
     30th September 2023 - Brescia, Italy</h4>
     <div class="row">
       <div class='conference-section'> 
-        <div> {% renderFile "./src/contents/conference.md" %} </div>
+        <div class="pt-4"> {% renderFile "./src/contents/conference.md" %} </div>
         <div> 
           <section id="venue">
             {% renderFile "./src/contents/venue.md" %}
           </section>
           <section id="tickets">
-            {% renderFile "./src/contents/tickets-disabled.md" %}
+            {% renderFile "./src/contents/tickets.md" %}
           </section>
         
       </div>
@@ -66,7 +66,7 @@ permalink: '/'
         </div>
       </section> 
       #}
-  <section id="sponsor" class="mb-24">
+  <section id="sponsorship" class="mb-24">
     {% renderFile "./src/contents/sponsor.md" %}
     <div class="row">
       {%- for post in collections.sponsor_packages -%}
@@ -84,14 +84,14 @@ permalink: '/'
       </div>
     </section>
 
-    <section class="our-sponsor">
+    <section id="sponsors">
       {% renderFile "./src/contents/sponsors.md" %}
-      <div class="grid-sponsor mb-4">
-        {%- for sponsor in collections.sponsors -%}
-          <a href="{{ sponsor.data.url }}" target="_blank">
+      <div id="sponsors-platinum" class="sponsor-level mb-4">
+        {%- for sponsor in collections.sponsors_platinum -%}
+          <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor sponsor-level-{{sponsor.data.level}}">
             <div class="sponsor-image">
               <img src="{{ sponsor.data.image }}"> </img>
-              <div class="badge">{{ sponsor.data.package }}</div>
+              <div class="badge">{{ sponsor.data.level }}</div>
             </div>
           </a>
         {%- endfor -%}

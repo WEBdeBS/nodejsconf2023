@@ -109,7 +109,7 @@ section {
   padding: 20px 10px;
 }
 
-#sponsor {
+#sponsorship {
   [class*="col-"] > div {
     background-color: shade-color($dark, 40%);
   }
@@ -254,7 +254,6 @@ section {
   color: #689f63;
   font-weight: 500;
   font-size: 24px;
-  margin-top: 50px;
 }
 .btn-custom:hover {
   background-color: #689f63;
@@ -282,7 +281,7 @@ section {
   margin: 0 auto;
 }
 
-.our-sponsor {
+#sponsors {
   text-align: center;
   margin: 100px 0;
   a {
