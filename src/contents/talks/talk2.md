@@ -5,8 +5,8 @@ topics: JavaScript iterators
 level: intermediate
 author_name: Luciano Mammino
 author_info: Senior Architect, fourTheorem
-author_bio: Luciano is an AWS Serverless Hero who was born in 1987, the same year Super Mario Bros was released in Europe, which, by chance is his favorite game! He started coding at the age of 12, hacking away with his father's old i386 armed only with MS-DOS and the QBasic interpreter and since then he has been professionally a software developer for more than 14 years. He is currently a senior Architect at fourTheorem where he is helping companies to get the best of the cloud, AWS, and serverless. He loves the full-stack web, Node.js & Serverless and co-authored "Node.js design patterns" (https://www.nodejsdesignpatterns.com), maintains https://fstack.link and co-hosts https://awsbites.com
-author_image_url: ./assets/speakers/mammino.jpg
+author_bio: Luciano is an AWS Serverless Hero who was born in 1987, the same year Super Mario Bros was released in Europe, which, by chance is his favorite game! He started coding at the age of 12, hacking away with his father's old i386 armed only with MS-DOS and the QBasic interpreter and since then he has been professionally a software developer for more than 14 years. He is currently a senior Architect at fourTheorem where he is helping companies to get the best of the cloud, AWS, and serverless. He loves the full-stack web, Node.js & Serverless and co-authored <a target="_blank" href='https://www.nodejsdesignpatterns.com'>Node.js design patterns</a>, maintains <a target="_blank" href='https://fstack.link'> Fullstack Bulletin</a> and co-hosts <a target="_blank" href='https://awsbites.com'>Aws Bites </a>
+author_image_url: ./assets/speakers/mammino.png
 author_links: 
   - name: twitter
     icon: twitter

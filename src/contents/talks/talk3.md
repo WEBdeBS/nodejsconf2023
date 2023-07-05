@@ -6,7 +6,7 @@ level: intermediate
 author_name: Golo	Roden
 author_info: Founder and CTO, the native web GmbH
 author_bio: Golo Roden is the founder and CTO of the native web GmbH. He advises companies on the design, architecture and development of distributed web and cloud applications and APIs, based on event-sourcing, CQRS and Domain-Driven Design (DDD). In the past 20 years, I''ve given more than 500 conference talks and wrote more than 1.000 articles for various IT magazines. I run a YouTube channel with currently > 23.000 subscribers on IT topics.
-author_image_url: ./assets/speakers/roden.jpg
+author_image_url: ./assets/speakers/roden.png
 author_links: 
   - name: twitter
     icon: twitter
