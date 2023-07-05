@@ -202,9 +202,9 @@ section {
 }
 
 .green {
-  border-color: #689f63;
+  border-color: $primary;
   span {
-    color: #689f63;
+    color: $primary;
     font-weight: 300;
   }
 }
@@ -248,15 +248,15 @@ section {
 .btn-custom {
   text-transform: uppercase;
   padding: 0.7rem 1.5rem;
-  border: 1px solid #689f63;
+  border: 1px solid $primary;
   border-radius: 2rem;
   background: none;
-  color: #689f63;
+  color: $primary;
   font-weight: 500;
   font-size: 24px;
 }
 .btn-custom:hover {
-  background-color: #689f63;
+  background-color: $primary;
   color: white;
 }
 
@@ -346,12 +346,35 @@ section {
 .link-button {
   text-transform: uppercase;
   padding: 0.7rem 1.5rem;
-  border: 1px solid #689f63;
+  border: 1px solid $primary;
   border-radius: 2rem;
 }
 
 .link-button:hover {
-  background-color: #689f63;
+  background-color: $primary;
   color: white;
   text-decoration: none;
+}
+
+#talks {
+  .talk-level span {
+    text-transform: uppercase;
+  }
+  .talk-topics {
+    color: $primary;
+  }
+  .author-name {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .author-image {
+    filter: grayscale(100%);
+  }
+  .author-links {
+    a {
+      i{
+        font-size: 1.5em;
+      }
+    }
+  }
 }
