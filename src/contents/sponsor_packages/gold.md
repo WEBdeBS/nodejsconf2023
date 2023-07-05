@@ -1,6 +1,6 @@
 ---
 title: Gold supporter
-price: 1000
+price: 1500
 weight: 2
 ---
 

@@ -13,15 +13,29 @@ module.exports = function(config) {
   config.addPlugin(EleventyRenderPlugin);
 
   config.addCollection("talks",(collection) => {
-    return collection.getFilteredByGlob("./src/content/talks/*.md");
+    return collection.getFilteredByGlob("./src/contents/talks/*.md");
   });
 
   config.addCollection("sponsor_packages",(collection) => {
     return collection
-    .getFilteredByGlob("./src/content/sponsor_packages/*.md")
+    .getFilteredByGlob("./src/contents/sponsor_packages/*.md")
     .sort((a, b) => {
       return a.data.weight - b.data.weight;
     })
+  });
+
+  config.addCollection("sponsors_platinum",(collection) => {
+    return collection
+    .getFilteredByGlob("./src/contents/sponsors/*.md")
+    .filter(s => s.data.level == "platinum")
+    .sort((a, b) => a.data.weight - b.data.weight)
+  });
+
+  config.addCollection("sponsors_silver",(collection) => {
+    return collection
+    .getFilteredByGlob("./src/contents/sponsors/*.md")
+    .filter(s => s.data.level == "silver")
+    .sort((a, b) => a.data.weight - b.data.weight)
   });
 
   /*

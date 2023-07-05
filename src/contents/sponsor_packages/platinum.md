@@ -1,6 +1,6 @@
 ---
-title: Platinum 
-price: 2000
+title: Platinum supporter
+price: 3000
 weight: 1
 ---
 

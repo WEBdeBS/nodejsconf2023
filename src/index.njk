@@ -16,28 +16,29 @@ permalink: '/'
     30th September 2023 - Brescia, Italy</h4>
     <div class="row">
       <div class='conference-section'> 
-        <div> {% renderFile "./src/includes/conference.md" %} </div>
+        <div class="pt-4"> {% renderFile "./src/contents/conference.md" %} </div>
         <div> 
           <section id="venue">
-            {% renderFile "./src/includes/venue.md" %}
+            {% renderFile "./src/contents/venue.md" %}
           </section>
           <section id="tickets">
-            {% renderFile "./src/includes/tickets.md" %}
+            {% renderFile "./src/contents/tickets.md" %}
           </section>
         
       </div>
     </div>
   </section>
 
-  <div id="map-venue"></div> 
-
+  <div id="map-venue" class="mb-4"></div> 
+{#
   <section id="cfp" class='cfp'>
-    {% renderFile "./src/includes/cfp.md" %}
+    {% renderFile "./src/contents/cfp.md" %}
     <a
       href="https://docs.google.com/forms/d/1qWxi6NRLyoroqqy3w7bDyGilO0QdN-xsTc6r4SHAx9Q/edit"
-     >Submit your proposal</a>
+      class="link-button"
+    >Submit your proposal</a>
   </section>
-
+#}
   {#
       <section id="to-be-defined">
         <div class="row">
@@ -65,8 +66,8 @@ permalink: '/'
         </div>
       </section> 
       #}
-  <section id="sponsor" class="mb-24">
-    {% renderFile "./src/includes/sponsor.md" %}
+  <section id="sponsorship" class="mb-24">
+    {% renderFile "./src/contents/sponsor.md" %}
     <div class="row">
       {%- for post in collections.sponsor_packages -%}
         <div class="col-12 col-md-6 col-lg-3 g-4">
@@ -83,50 +84,65 @@ permalink: '/'
       </div>
     </section>
 
+    <section id="sponsors">
+      {% renderFile "./src/contents/sponsors.md" %}
+      <div id="sponsors-platinum" class="sponsor-level mb-4">
+        {%- for sponsor in collections.sponsors_platinum -%}
+          <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor">
+            <div class="sponsor-image sponsor-level-{{sponsor.data.level}}">
+              <img src="{{ sponsor.data.image }}"> </img>
+              <div class="badge">{{ sponsor.data.level }}</div>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+      <div id="sponsors-silver" class="sponsor-level mb-4">
+        {%- for sponsor in collections.sponsors_silver -%}
+          <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor ">
+            <div class="sponsor-image sponsor-level-{{sponsor.data.level}}">
+              <img src="{{ sponsor.data.image }}"> </img>
+              <div class="badge">{{ sponsor.data.level }}</div>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+      <a class="link-button" href="mailto:info@webdebs.org?subject=Sponsorship request">Become a sponsor</a>
+    </section>
+
     <div class='banner mt-24'></div>
 
-    <section id="follow-us" class="mt-96">
+    <section id="follow-us" class="mt-96 text-center">
       <h1>
         👀 Follow us</h1>
-      <div class="row row-cols-auto">
-        <div class="col">
-          <a href="https://twitter.com/webdebresa">
+      <div class="d-flex justify-content-center">
+          <a class="d-block m-2" href="https://twitter.com/webdebresa">
             <i class="bi bi-twitter"></i>
             Twitter
           </a>
-        </div>
-        <div class="col">
-          <a href="https://facebook.com/webdebs">
+          <a class="d-block m-2" href="https://facebook.com/webdebs">
             <i class="bi bi-facebook"></i>
             Facebook
           </a>
-        </div>
-        <div class="col">
-          <a href="https://webdebs.eventbrite.com">
+          <a class="d-block  m-2" href="https://webdebs.eventbrite.com">
             <i class="bi bi-calendar-event"></i>
             Eventbrite
           </a>
-        </div>
         <!-- div class="col"> <a href="http://slack.webdebs.org">
             <i class="bi bi-slack"></i> Slack
         </a> </div> -->
       </div>
     </section>
-    <section id="contacts">
-      <h1>
+    <section id="contacts" class="text-center">
+      <h1 >
         🤙 Contacts</h1>
-      <div class="row row-cols-auto">
-        <div class="col">
-          <a href="http://webdebs.org">
+      <div class="d-flex justify-content-center">
+          <a class="d-block m-2" href="http://webdebs.org">
             <i class="bi bi-globe"></i>
             Website
           </a>
-        </div>
-        <div class="col">
-          <a href="mailto:info@webdebs.org">
+          <a class="d-block m-2" href="mailto:info@webdebs.org">
             <i class="bi bi-envelope"></i>
             Email
           </a>
-        </div>
       </div>
     </section>
