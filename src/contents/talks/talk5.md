@@ -1,6 +1,6 @@
 ---
 weight: 5
-title: The tale of avoiding a time-based DDOS attack in Node.js
+title: The ORM JavaScript Developers Deserve
 topics: Security
 level: intermediate
 author_name: Alex Ruheni Koi
