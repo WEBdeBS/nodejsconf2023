@@ -52,37 +52,43 @@ permalink: '/'
       #}
 
   <section id="talks">
-    <div class="intro mb-4">
+    <div class="intro mb-5">
       {% renderFile "./src/contents/talks.md" %}
     </div>
     {%- for talk in collections.talks -%}
-    <div class="row mb-5 ">
+    <div class="row ">
       <div class="col-12">
         <h3>{{ talk.data.title }}</h3>
-        <div class="talk-topics mb-1 ">{{ talk.data.topics | safe }}</div>
-        <div class="talk-level mb-2 ">Level <span>{{ talk.data.level }}</span></div>
+        <div class="talk-topics mb-4 ">{{ talk.data.topics | safe }}</div>
         <div class="talk-abstract mb-4">
           {{ talk.templateContent | safe }}
         </div>
         <div class="author mb-2">
           <div class="row">
-            <div class="col-12 col-md-3">
-              <img class="author-image d-block mb-2 img-thumbnail img-fluid" src="{{ talk.data.author_image_url }}" alt="{{ talk.data.author_name }} picture" >
-              <div class="author-links">
-                {%- for link in talk.data.author_links -%}
-                  <a class="d-inline-block m-2" target="_blank" href="{{ link.url }}" alt="{{ talk.data.author_name }} {{ link.name }}">
-                    <i class="bi bi-{{ link.icon }}"></i>
-                  </a>
-                {%- endfor -%}
-              </div>
-            </div>
-            <div class="col-12 col-md-9">
+            <div class="col-12">
               <div class="author-info">
-                <div class="author-name">{{ talk.data.author_name | safe }}</div>
-                <div class="author-info"><strong>{{ talk.data.author_info | safe }}</strong></div>
-                <div class="author-info">{{ talk.data.author_bio | safe }}</div>
+                <div class="d-flex align-items-center ">
+                  <div class="author-image mr-4">
+                    <img class="d-block img-fluid" src="{{ talk.data.author_image_url }}"
+                      alt="{{ talk.data.author_name }} picture">
+                  </div>
+                  <div>
+                    <div class="author-name">{{ talk.data.author_name | safe }}
+                      <div class="author-links">
+                        {%- for link in talk.data.author_links -%}
+                        <a class="d-inline-block m-1" target="_blank" href="{{ link.url }}"
+                          alt="{{ talk.data.author_name }} {{ link.name }}">
+                          <i class="bi bi-{{ link.icon }}"></i>
+                        </a>
+                        {%- endfor -%}
+                      </div>
+                    </div>
+                    <div class="author-info">{{ talk.data.author_info | safe }}</div>
+                  </div>
+                </div>
+                <div class="author-bio">{{ talk.data.author_bio | safe }}</div>
               </div>
-
+  
             </div>
           </div>
         </div>
@@ -90,7 +96,7 @@ permalink: '/'
     </div>
     <hr>
     {%- endfor -%}
-  </section> 
+  </section>
 
   <section id="sponsorship" class="mb-24">
     {% renderFile "./src/contents/sponsor.md" %}
