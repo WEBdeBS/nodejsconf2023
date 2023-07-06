@@ -13,7 +13,10 @@ module.exports = function(config) {
   config.addPlugin(EleventyRenderPlugin);
 
   config.addCollection("talks",(collection) => {
-    return collection.getFilteredByGlob("./src/contents/talks/*.md");
+    return collection.getFilteredByGlob("./src/contents/talks/*.md")
+    .sort((a, b) => {
+      return a.data.weight - b.data.weight;
+    });
   });
 
   config.addCollection("sponsor_packages",(collection) => {
