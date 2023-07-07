@@ -16,21 +16,21 @@ permalink: '/'
     30th September 2023 - Brescia, Italy</h4>
     <div class="row">
       <div class='conference-section'> 
-        <div> {% renderFile "./src/contents/conference.md" %} </div>
+        <div class="pt-4"> {% renderFile "./src/contents/conference.md" %} </div>
         <div> 
           <section id="venue">
             {% renderFile "./src/contents/venue.md" %}
           </section>
           <section id="tickets">
-            {% renderFile "./src/contents/tickets-disabled.md" %}
+            {% renderFile "./src/contents/tickets.md" %}
           </section>
         
       </div>
     </div>
   </section>
 
-  <div id="map-venue"></div> 
-
+  <div id="map-venue" class="mb-4"></div> 
+{#
   <section id="cfp" class='cfp'>
     {% renderFile "./src/contents/cfp.md" %}
     <a
@@ -38,7 +38,7 @@ permalink: '/'
       class="link-button"
     >Submit your proposal</a>
   </section>
-
+#}
   {#
       <section id="to-be-defined">
         <div class="row">
@@ -88,14 +88,23 @@ permalink: '/'
       {% renderFile "./src/contents/sponsors.md" %}
       <div id="sponsors-platinum" class="sponsor-level mb-4">
         {%- for sponsor in collections.sponsors_platinum -%}
-          <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor sponsor-level-{{sponsor.data.level}}">
-            <div class="sponsor-image">
+          <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor">
+            <div class="sponsor-image sponsor-level-{{sponsor.data.level}}">
               <img src="{{ sponsor.data.image }}"> </img>
               <div class="badge">{{ sponsor.data.level }}</div>
             </div>
           </a>
         {%- endfor -%}
-  
+      </div>
+      <div id="sponsors-silver" class="sponsor-level mb-4">
+        {%- for sponsor in collections.sponsors_silver -%}
+          <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor ">
+            <div class="sponsor-image sponsor-level-{{sponsor.data.level}}">
+              <img src="{{ sponsor.data.image }}"> </img>
+              <div class="badge">{{ sponsor.data.level }}</div>
+            </div>
+          </a>
+        {%- endfor -%}
       </div>
       <a class="link-button" href="mailto:info@webdebs.org?subject=Sponsorship request">Become a sponsor</a>
     </section>

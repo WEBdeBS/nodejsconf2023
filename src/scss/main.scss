@@ -254,7 +254,6 @@ section {
   color: #689f63;
   font-weight: 500;
   font-size: 24px;
-  margin-top: 50px;
 }
 .btn-custom:hover {
   background-color: #689f63;
@@ -288,18 +287,34 @@ section {
   a {
     text-decoration: none;
   }
-  .sponsor-image,
-  .sponsor-image-small {
+
+  .sponsor-image {
     // background-color: #141619;
     border: 1px solid rgb(69, 69, 69);
     border-radius: 1rem;
-    max-height: 200px;
-    max-width: 400px;
-    height: 150px;
-    width: 350px;
     transition: 0.2s;
     display: inline-block;
     margin: 30px 10px;
+
+    &.sponsor-level-platinum  {
+      width: 400px;
+      height: 200px;
+    }
+
+    &.sponsor-level-gold  {
+      width: 300px;
+      height: 150px;
+    }
+
+    &.sponsor-level-silver  {
+      width: 220px;
+      height: 120px;
+    }
+
+    &.sponsor-level-bronze  {
+      width: 200px;
+      height: 100px;
+    }
 
     img {
       object-fit: contain;
@@ -325,18 +340,6 @@ section {
 
   .sponsor-image:hover {
     transform: scale(1.02);
-  }
-
-  .sponsor-image-small {
-    max-height: 100px;
-    max-width: 200px;
-    height: 75px;
-    width: 175px;
-    img {
-      height: calc(100% - 20px);
-      width: calc(100% - 20px);
-      margin: 5px;
-    }
   }
 }
 
