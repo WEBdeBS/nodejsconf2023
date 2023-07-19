@@ -344,6 +344,35 @@ section {
   }
 }
 
+#media_partners {
+  text-align: center;
+  margin: 100px 0;
+  a {
+    text-decoration: none;
+  }
+
+  .media_partner-image {
+    border: 1px solid rgb(69, 69, 69);
+    border-radius: 1rem;
+    transition: 0.2s;
+    display: inline-block;
+    margin: 30px 10px;
+    width: 300px;
+    height: 150px;
+
+    img {
+      object-fit: contain;
+      height: calc(100% - 50px);
+      width: calc(100% - 50px);
+      margin: 20px;
+    }
+  }
+
+  .media_partner-image:hover {
+    transform: scale(1.02);
+  }
+}
+
 .link-button {
   text-transform: uppercase;
   padding: 0.7rem 1.5rem;
