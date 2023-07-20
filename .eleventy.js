@@ -41,6 +41,12 @@ module.exports = function(config) {
     .sort((a, b) => a.data.weight - b.data.weight)
   });
 
+  config.addCollection("media_partners",(collection) => {
+    return collection
+    .getFilteredByGlob("./src/contents/media_partners/*.md")
+    .sort((a, b) => a.data.weight - b.data.weight)
+  });
+
   /*
   let options = {
     html: true,

@@ -141,6 +141,19 @@ permalink: '/'
       <a class="link-button" href="mailto:info@webdebs.org?subject=Sponsorship request">Become a sponsor</a>
     </section>
 
+    <section id="media_partners">
+      {% renderFile "./src/contents/media_partners.md" %}
+      <div class="mb-4">
+        {%- for media_partner in collections.media_partners -%}
+          <a href="{{ media_partner.data.url }}" target="_blank" class="media_partner">
+            <div class="media_partner-image">
+              <img src="{{ media_partner.data.image }}"> </img>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+    </section>
+
     <div class='banner mt-24'></div>
 
     <section id="follow-us" class="mt-96 text-center">
