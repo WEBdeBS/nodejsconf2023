@@ -1,5 +1,5 @@
 ---
-weight: 1
+weight: 6
 title: The first time we met was in 2012
 topics: The past and future of Node.js core
 level: beginner

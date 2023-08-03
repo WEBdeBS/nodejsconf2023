@@ -1,5 +1,5 @@
 ---
-weight: 2
+weight: 5
 title: Did you know JavaScript has iterators?
 topics: JavaScript iterators
 level: intermediate
