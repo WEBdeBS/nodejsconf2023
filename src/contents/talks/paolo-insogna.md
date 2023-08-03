@@ -1,5 +1,5 @@
 ---
-weight: 4
+weight: 7
 title: The tale of avoiding a time-based DDOS attack in Node.js
 topics: Security
 level: intermediate

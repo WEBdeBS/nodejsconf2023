@@ -1,5 +1,5 @@
 ---
-weight: 7
+weight: 4
 title: JavaScript Source Maps, can we do better?
 topics: Debugging DX
 level: intermediate

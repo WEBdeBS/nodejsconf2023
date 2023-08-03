@@ -1,5 +1,5 @@
 ---
-weight: 9
+weight: 8
 title: To be announced, stay tuned!
 topics: 
 level: intermediate

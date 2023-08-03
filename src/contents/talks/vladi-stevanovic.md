@@ -1,5 +1,5 @@
 ---
-weight: 8
+weight: 9
 title: Every Node.js app should have real-time collaboration features
 topics: Real-time collab features, CRDTs, Node.js OSS projects, system architecture, backend design
 level: intermediate
