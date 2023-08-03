@@ -22,7 +22,7 @@ author_links:
     url: https://www.instagram.com/ruheni_alex
   - name: linkedin
     icon: linkedin
-    url: https://www.instagram.com/ruheni_alex
+    url: https://www.linkedin.com/in/ruheni/
 ---
 
 Working with databases in Node.js can be painful! The open-source Prisma ORM provides a new approach that makes it fun, easy, and intuitive for developers to work with databases.
