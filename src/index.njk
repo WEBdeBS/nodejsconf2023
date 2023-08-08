@@ -130,7 +130,7 @@ permalink: '/'
       </div>
       <div id="sponsors-silver" class="sponsor-level mb-4">
         {%- for sponsor in collections.sponsors_silver -%}
-          <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor ">
+          <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor">
             <div class="sponsor-image sponsor-level-{{sponsor.data.level}}">
               <img src="{{ sponsor.data.image }}"> </img>
               <div class="badge">{{ sponsor.data.level }}</div>
@@ -138,7 +138,19 @@ permalink: '/'
           </a>
         {%- endfor -%}
       </div>
-      <a class="link-button" href="mailto:info@webdebs.org?subject=Sponsorship request">Become a sponsor</a>
+      <div id="sponsors-bronze" class="sponsor-level mb-4">
+        {%- for sponsor in collections.sponsors_bronze -%}
+          <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor">
+            <div class="sponsor-image sponsor-level-{{sponsor.data.level}}">
+              <img src="{{ sponsor.data.image }}"> </img>
+              <div class="badge">{{ sponsor.data.level }}</div>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+      <div class="mt-24">
+        <a class="link-button" href="mailto:info@webdebs.org?subject=Sponsorship request">Become a sponsor</a>
+      </div>
     </section>
 
     <section id="media_partners">
