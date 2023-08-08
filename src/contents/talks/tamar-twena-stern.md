@@ -26,6 +26,6 @@ author_links:
 ---
 
 
-Node.js is a very popular server-side framework that is slowly becoming the main platform for developing server-side applications. A lot of phrases are mentioned when developers talk about Node.js, such as ‘Single process with event loop’, ‘Non blocking IO’ , ‘generational garbage collector’, and more. But what do those phrases mean? Is Node.js really single threaded? How do the event loop and other internal mechanisms of the platform really work?
+In the newest versions of V8, there are architectural changes that make V8 extremely fast. When V8 parses code, part of it is interpreted and part of it compiles. V8 memory management has improved a lot and now presents sophisticated algorithms, as well as many interesting optimizations. In this talk, Tamar will get into the internals of V8 in the new versions, from the code interpreters and compilers to the memory management: What was changed? Which layers were added? How does it make Node.js applications much faster and in which cases/patterns? 
 
-In this talk, I will give an overview on some of the platform internals. We will do a deep dive into the event loop, how it works, what its different phases are, and how it enables non-blocking IO. And, of course, we will answer the repeating question – is the event loop single threaded? We will also talk about the JIT compiler and the v8 engine. The session will end with a look at the garbage collector mechanism, the different algorithms that exists in each garbage collector phase, and how we can monitor our software to start detecting memory leaks.
+The talk will include demos of patterns in the code that you can optimize to get better performance for your application.
