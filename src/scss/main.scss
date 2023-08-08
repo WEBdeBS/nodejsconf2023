@@ -313,8 +313,8 @@ section {
     }
 
     &.sponsor-level-bronze {
-      width: 200px;
-      height: 100px;
+      width: 160px;
+      height: 80px;
     }
 
     img {
@@ -499,8 +499,14 @@ section {
     }
 
     &.sponsor-level-bronze {
-      width: calc(50% - 22px) !important;
-      height: 120px !important;
+      width: calc(33% - 22px) !important;
+      height: 80px !important;
+
+      img {
+        margin: 13px !important;
+        width: calc(100% - 26px) !important;
+        height: calc(100% - 35px) !important;
+      }
     }
   }
 
