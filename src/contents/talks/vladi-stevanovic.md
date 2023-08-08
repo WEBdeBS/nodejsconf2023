@@ -10,7 +10,7 @@ author_image_url: ./assets/speakers/vladi.png
 author_links: 
   - name: twitter
     icon: twitter
-    url: https://twitter.com/argoeris
+    url: https://twitter.com/vladistevanovic
   # - name: github
   #   icon: github
   #   url: https://github.com/kamilogorek
