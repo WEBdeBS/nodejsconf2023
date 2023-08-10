@@ -1,6 +1,6 @@
 ---
 weight: 8
-title: A Journey into Node.js Internals 
+title: Architectural changes in V8 and how they will improve your server performances
 topics: Internals
 level: intermediate
 author_name: Tamar Twena-Stern 
