@@ -43,6 +43,13 @@ module.exports = function (config) {
       .sort((a, b) => a.data.weight - b.data.weight)
   })
 
+  config.addCollection('sponsors_gold',(collection) => {
+    return collection
+    .getFilteredByGlob('./src/contents/sponsors/*.md')
+    .filter(s => s.data.level == 'gold')
+    .sort((a, b) => a.data.weight - b.data.weight)
+  })
+
   config.addCollection('sponsors_silver', collection => {
     return collection
       .getFilteredByGlob('./src/contents/sponsors/*.md')
