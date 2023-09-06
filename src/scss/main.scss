@@ -400,48 +400,51 @@ section {
     margin: 0;
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 24px;
+      bottom: 24px;
+      left: 124px;
+      width: 1px;
+      background-color: #689f63;
+    }
 
     .slot {
       display: flex;
       flex-direction: row;
-      align-items: center;
 
       .timeslot {  
         width: 130px;
         font-weight: bold;
-      }
-
-      .icon {
-
+        padding-top: 16px;
+        margin-top: 4px;
       }
 
       .info {
+        display: block;
         position: relative;
         display: flex;
         flex-direction: column;
         flex: 1;
-        padding: 20px 10px;
+        padding: 16px 16px;
         margin: 4px 0px 0px 20px;
-        background-color: #1a1a1a;
+        background-color: #2e2e2e;
         border-radius: 8px;
 
-        &::before {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 8px;
-          bottom: 8px;
-          left: -20px;
-          width: 1px;
-          background-color: #666666;
-        }
-
         &::after {
-          display: flex;
           position: absolute;
-          font-size: large;
-          top: 30px;
-          left: -30px;
+          width: 29px;
+          height: 29px;
+          background-color: #22252a;
+          border-radius: 50%;
+          top: 12px;
+          left: -40px;
+          text-align: center;
+          line-height: 29px;
         }
         &.registration::after { content: '✔️'; }
         &.welcome::after { content: '🤗'; }
@@ -452,8 +455,42 @@ section {
 
         .title {
           font-weight: bold;
-          color: #689f63;
+          color: #9cd197;
         }
+
+        .author {
+          font-size: 0.9rem;
+          color: #cccccc;
+        }
+
+        &.talk {
+          background-color: #1a1a1a;
+          .title {
+            color: #689f63;
+          }
+        }
+
+        &:not([href]) {
+          cursor: default;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &[href] {
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+            background-color: #22252a;
+            box-shadow: 0 0 0 2px #689f63;
+
+            &::after {
+              box-shadow: 0 0 0 2px #689f63;
+            }
+          }
+        }
+
       }
     }
     
