@@ -39,17 +39,23 @@ permalink: '/'
       >Submit your proposal</a>
     </section>
   #}
-
-  {#
-      <section id="to-be-defined">
-        <div class="row">
-          <div class="col">
-            <h1>Agenda, Venue, Tickets</h1>
-            <p>To be defined</p>
-          </div>
+  
+  <section id="schedule">
+    <div class="intro mb-5">
+      {% renderFile "./src/contents/schedule.md" %}
+    </div>
+    <ul class="schedule-slots">
+      {%- for slot in collections.slots -%}
+      <li class="slot">
+        <div class="timeslot">{{ slot.data.timeslot }}</div>
+        <div class="info {{ slot.data.type }}">
+          <div class="title">{{ slot.data.title }}</div>
+          <div class="author">{{ slot.data.author_name }}</div>
         </div>
-      </section>
-      #}
+      </li>
+      {%- endfor -%}
+    </ul>
+  </section>
 
   <section id="talks">
     <div class="intro mb-5">

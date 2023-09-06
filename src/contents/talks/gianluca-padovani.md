@@ -1,5 +1,7 @@
 ---
 weight: 2
+type: talk
+timeslot: 09:40 - 10:10
 title: Stop logging. Start observing
 topics: Observability
 level: intermediate

@@ -1,5 +1,7 @@
 ---
 weight: 1
+type: talk
+timeslot: 09:40 - 10:10
 title: The ORM JavaScript Developers Deserve
 topics: Security
 level: intermediate

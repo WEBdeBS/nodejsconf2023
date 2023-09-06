@@ -386,8 +386,82 @@ section {
   text-decoration: none;
 }
 
-#talks {
+#schedule {
   margin: 0 auto;
+  max-width: 800px;
+  p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .schedule-slots {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    .slot {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .timeslot {  
+        width: 130px;
+        font-weight: bold;
+      }
+
+      .icon {
+
+      }
+
+      .info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px 10px;
+        margin: 4px 0px 0px 20px;
+        background-color: #1a1a1a;
+        border-radius: 8px;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 8px;
+          bottom: 8px;
+          left: -20px;
+          width: 1px;
+          background-color: #666666;
+        }
+
+        &::after {
+          display: flex;
+          position: absolute;
+          font-size: large;
+          top: 30px;
+          left: -30px;
+        }
+        &.registration::after { content: '✔️'; }
+        &.welcome::after { content: '🤗'; }
+        &.coffee-break::after { content: '☕️'; }
+        &.talk::after { content: '🎤'; }
+        &.lunch::after { content: '🍝'; }
+        &.closing::after { content: '👋'; }
+
+        .title {
+          font-weight: bold;
+          color: #689f63;
+        }
+      }
+    }
+    
+  }
+}
+
+#talks {
+  margin: 100px auto;
   max-width: 800px;
   hr {
     margin: 60px 0;
