@@ -129,6 +129,16 @@ permalink: '/'
         {%- endfor -%}
       </div>
       <div id="sponsors-silver" class="sponsor-level mb-4">
+        {%- for sponsor in collections.sponsors_gold -%}
+          <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor">
+            <div class="sponsor-image sponsor-level-{{sponsor.data.level}}">
+              <img src="{{ sponsor.data.image }}"> </img>
+              <div class="badge">{{ sponsor.data.level }}</div>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+      <div id="sponsors-silver" class="sponsor-level mb-4">
         {%- for sponsor in collections.sponsors_silver -%}
           <a href="{{ sponsor.data.url }}" target="_blank" class="sponsor">
             <div class="sponsor-image sponsor-level-{{sponsor.data.level}}">
