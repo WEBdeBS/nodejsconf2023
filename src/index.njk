@@ -48,10 +48,15 @@ permalink: '/'
       {%- for slot in collections.slots -%}
       <li class="slot">
         <div class="timeslot">{{ slot.data.timeslot }}</div>
-        <div class="info {{ slot.data.type }}">
+        <a 
+          class="info {{ slot.data.type }}" 
+          {% if slot.data.type == 'talk' %}
+          href="#{{ slot.url | replace("/", "_")  }}"
+          {% endif %}
+        >
           <div class="title">{{ slot.data.title }}</div>
           <div class="author">{{ slot.data.author_name }}</div>
-        </div>
+        </a>
       </li>
       {%- endfor -%}
     </ul>
@@ -62,7 +67,7 @@ permalink: '/'
       {% renderFile "./src/contents/talks.md" %}
     </div>
     {%- for talk in collections.talks -%}
-    <div class="row ">
+    <div class="row" id="{{ talk.url | replace("/", "_")  }}">
       <div class="col-12">
         <h3>{{ talk.data.title }}</h3>
         <div class="talk-topics mb-4 ">{{ talk.data.topics | safe }}</div>
