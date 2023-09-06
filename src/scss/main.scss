@@ -500,7 +500,7 @@ section {
 #talks {
   margin: 100px auto;
   max-width: 800px;
-  .row {
+  > .row {
     padding-top: 60px;
   }
   hr {
