@@ -1,4 +1,4 @@
 ---
-timeslot: 08:30 - 09:30
+timeslot: 11:00 - 11:20
 type: coffee-break
 title: Coffee break

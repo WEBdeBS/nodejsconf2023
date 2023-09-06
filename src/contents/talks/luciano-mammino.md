@@ -1,7 +1,7 @@
 ---
 weight: 5
 type: talk
-timeslot: 09:40 - 10:10
+timeslot: 14:35 - 15:05
 title: Did you know JavaScript has iterators?
 topics: JavaScript iterators
 level: intermediate

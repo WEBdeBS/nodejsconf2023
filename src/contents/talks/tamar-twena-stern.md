@@ -1,7 +1,7 @@
 ---
 weight: 8
 type: talk
-timeslot: 10:15 - 10:55 
+timeslot: 10:20 - 11:00 
 title: Architectural changes in V8 and how they will improve your server performances
 topics: Internals
 level: intermediate

@@ -1,4 +1,4 @@
 ---
-timeslot: 08:30 - 09:30
+timeslot: 17:50 - 18:00
 type: closing
 title: Closing

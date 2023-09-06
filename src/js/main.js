@@ -58,4 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     level.innerHTML = '';
     sponsors.forEach(s => level.appendChild(s))
   });
+
+  // setup talks
+  console.log("talks")
 });

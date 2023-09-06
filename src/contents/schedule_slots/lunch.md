@@ -1,4 +1,4 @@
 ---
-timeslot: 08:30 - 09:30
+timeslot: 12:45 - 14:00
 type: lunch
 title: Lunch

@@ -1,7 +1,7 @@
 ---
 weight: 9
 type: talk
-timeslot: 09:40 - 10:10
+timeslot: 14:00 - 14:30
 title: Every Node.js app should have real-time collaboration features
 topics: Real-time collab features, CRDTs, Node.js OSS projects, system architecture, backend design
 level: intermediate

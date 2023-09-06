@@ -1,7 +1,7 @@
 ---
 weight: 3
 type: talk
-timeslot: 09:40 - 10:10
+timeslot: 17:10 - 17:50
 title: "CRUD is an anti-pattern, or: How I learned to love event-sourcing"
 topics: Architecture, backend, frontend, event-driven, distributed systems
 level: intermediate
