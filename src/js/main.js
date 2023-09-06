@@ -1,14 +1,17 @@
-let bootstrap = require('bootstrap');
+let bootstrap = require('bootstrap')
 
-function initMap(){
-  console.log("initMap")
+const CONF_DATE = new Date('2023-09-30 00:00:00')
+const NOW = new Date()
 
-  const myLatLng = { lat: 45.4640236, lng: 10.5340366 };
-  const map = new google.maps.Map(document.getElementById("map-venue"), {
+function initMap() {
+  console.log('initMap')
+
+  const myLatLng = { lat: 45.4640236, lng: 10.5340366 }
+  const map = new google.maps.Map(document.getElementById('map-venue'), {
     zoom: 12,
     mapId: 'debe6a4b65bb50c1',
-    center: myLatLng
-  });
+    center: myLatLng,
+  })
 
   // Info window content
   var contentString = `
@@ -26,36 +29,57 @@ function initMap(){
         Details and directions
       </a>
     </div>
-  `;
+  `
 
   // Add info window
   const infowindow = new google.maps.InfoWindow({
-      content: contentString
-  });
+    content: contentString,
+  })
 
   // The marker, positioned at selected location
   const marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'Googleplex (CodexWorld)'
-  });
+    position: myLatLng,
+    map: map,
+    title: 'Googleplex (CodexWorld)',
+  })
 
   // Marker click event: open info window
-  google.maps.event.addListener(marker, 'click', function() {
-      infowindow.open(map, marker);
-  });
+  google.maps.event.addListener(marker, 'click', function () {
+    infowindow.open(map, marker)
+  })
 
   // Open info window on load
-  infowindow.open(map, marker);
+  infowindow.open(map, marker)
 }
 
-window.initMap = initMap;
+window.initMap = initMap
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".sponsor-level").forEach((level)=> {
-    const sponsors = Array.from(level.querySelectorAll(".sponsor")).sort(() => Math.random() - 0.5);
-    level.innerHTML = '';
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.sponsor-level').forEach(level => {
+    const sponsors = Array.from(level.querySelectorAll('.sponsor')).sort(
+      () => Math.random() - 0.5,
+    )
+    level.innerHTML = ''
     sponsors.forEach(s => level.appendChild(s))
-  });
-});
+  })
+
+  document.querySelectorAll('.timeslot').forEach(timeslot => {
+    const [startTime, endTime] = timeslot.innerHTML.split(' - ')
+
+    // const [startHours, startMinutes] = startTime.split(':')
+    // const startDate = (new Date()).setHours(Number(startHours), Number(startMinutes))
+
+    const [endHours, endMinutes] = endTime.split(':')
+    const endDate = new Date(CONF_DATE).setHours(
+      Number(endHours),
+      Number(endMinutes),
+    )
+
+    const slot = timeslot.parentElement
+    if (NOW < endDate) {
+      slot.classList.add('future')
+    } else {
+      slot.classList.add('past')
+    }
+  })
+})
