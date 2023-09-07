@@ -1,5 +1,7 @@
 ---
 weight: 7
+type: talk
+timeslot: 12:05 - 12:45
 title: The tale of avoiding a time-based DDOS attack in Node.js
 topics: Security
 level: intermediate

@@ -1,65 +1,74 @@
 // inspired by https://github.com/webpixels/bootstrap-starter-kit
 
-const markdownIt = require("markdown-it");
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const markdownIt = require('markdown-it')
+const { EleventyRenderPlugin } = require('@11ty/eleventy')
 
-
-module.exports = function(config) {
+module.exports = function (config) {
   config.addPassthroughCopy('src/assets')
-  config.addWatchTarget("./src/");
-  config.addWatchTarget("./src/scss");
-  config.addLayoutAlias("layout1", "layout1.njk");
+  config.addWatchTarget('./src/')
+  config.addWatchTarget('./src/scss')
+  config.addLayoutAlias('layout1', 'layout1.njk')
 
-  config.addPlugin(EleventyRenderPlugin);
+  config.addPlugin(EleventyRenderPlugin)
 
-  config.addCollection("talks",(collection) => {
-    return collection.getFilteredByGlob("./src/contents/talks/*.md")
-    .sort((a, b) => {
-      return a.data.weight - b.data.weight;
-    });
-  });
-
-  config.addCollection("sponsor_packages",(collection) => {
+  config.addCollection('slots', collection => {
     return collection
-    .getFilteredByGlob("./src/contents/sponsor_packages/*.md")
-    .sort((a, b) => {
-      return a.data.weight - b.data.weight;
-    })
-  });
+      .getFilteredByGlob([
+        './src/contents/talks/*.md',
+        './src/contents/schedule_slots/*.md',
+      ])
+      .sort((a, b) => a.data.timeslot.localeCompare(b.data.timeslot))
+  })
 
-  config.addCollection("sponsors_platinum",(collection) => {
+  config.addCollection('talks', collection => {
     return collection
-    .getFilteredByGlob("./src/contents/sponsors/*.md")
-    .filter(s => s.data.level == "platinum")
+      .getFilteredByGlob('./src/contents/talks/*.md')
+      .sort((a, b) => {
+        return a.data.weight - b.data.weight
+      })
+  })
+
+  config.addCollection('sponsor_packages', collection => {
+    return collection
+      .getFilteredByGlob('./src/contents/sponsor_packages/*.md')
+      .sort((a, b) => {
+        return a.data.weight - b.data.weight
+      })
+  })
+
+  config.addCollection('sponsors_platinum', collection => {
+    return collection
+      .getFilteredByGlob('./src/contents/sponsors/*.md')
+      .filter(s => s.data.level == 'platinum')
+      .sort((a, b) => a.data.weight - b.data.weight)
+  })
+
+  config.addCollection('sponsors_gold',(collection) => {
+    return collection
+    .getFilteredByGlob('./src/contents/sponsors/*.md')
+    .filter(s => s.data.level == 'gold')
     .sort((a, b) => a.data.weight - b.data.weight)
-  });
+  })
 
-  config.addCollection("sponsors_gold",(collection) => {
+  config.addCollection('sponsors_silver', collection => {
     return collection
-    .getFilteredByGlob("./src/contents/sponsors/*.md")
-    .filter(s => s.data.level == "gold")
-    .sort((a, b) => a.data.weight - b.data.weight)
-  });
+      .getFilteredByGlob('./src/contents/sponsors/*.md')
+      .filter(s => s.data.level == 'silver')
+      .sort((a, b) => a.data.weight - b.data.weight)
+  })
 
-  config.addCollection("sponsors_silver",(collection) => {
+  config.addCollection('sponsors_bronze', collection => {
     return collection
-    .getFilteredByGlob("./src/contents/sponsors/*.md")
-    .filter(s => s.data.level == "silver")
-    .sort((a, b) => a.data.weight - b.data.weight)
-  });
+      .getFilteredByGlob('./src/contents/sponsors/*.md')
+      .filter(s => s.data.level == 'bronze')
+      .sort((a, b) => a.data.weight - b.data.weight)
+  })
 
-  config.addCollection("sponsors_bronze",(collection) => {
+  config.addCollection('media_partners', collection => {
     return collection
-    .getFilteredByGlob("./src/contents/sponsors/*.md")
-    .filter(s => s.data.level == "bronze")
-    .sort((a, b) => a.data.weight - b.data.weight)
-  });
-
-  config.addCollection("media_partners",(collection) => {
-    return collection
-    .getFilteredByGlob("./src/contents/media_partners/*.md")
-    .sort((a, b) => a.data.weight - b.data.weight)
-  });
+      .getFilteredByGlob('./src/contents/media_partners/*.md')
+      .sort((a, b) => a.data.weight - b.data.weight)
+  })
 
   /*
   let options = {
@@ -70,17 +79,17 @@ module.exports = function(config) {
   config.setLibrary("md", markdownIt(options));
   */
 
-  return { 
+  return {
     dir: {
-      input: "src",
-      output: "dist",
-      includes: "includes",
+      input: 'src',
+      output: 'dist',
+      includes: 'includes',
       //data: "data", // relative to input
     },
     site: {},
-    templateFormats: ["html", "njk", "md", "11ty.js"],
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
+    templateFormats: ['html', 'njk', 'md', '11ty.js'],
+    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
     //passthroughFileCopy: true
-  };
+  }
 }

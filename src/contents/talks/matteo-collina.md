@@ -1,5 +1,7 @@
 ---
 weight: 6
+type: talk
+timeslot: 09:45 - 10:15
 title: The first time we met was in 2012
 topics: The past and future of Node.js core
 level: beginner

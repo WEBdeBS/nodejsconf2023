@@ -1,5 +1,7 @@
 ---
 weight: 4
+type: talk
+timeslot: 15:20 - 16:00
 title: JavaScript Source Maps, can we do better?
 topics: Debugging DX
 level: intermediate
