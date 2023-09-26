@@ -5,7 +5,8 @@ const CONF = {
   end: new Date('2023-09-30 22:00:00'),
 }
 
-window.NOW = new Date()
+const mockDate = localStorage.getItem('NOW')
+window.NOW = mockDate !== undefined ? new Date(mockDate) : new Date()
 
 function initMap() {
   const myLatLng = { lat: 45.4640236, lng: 10.5340366 }
