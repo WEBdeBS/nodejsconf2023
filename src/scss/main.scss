@@ -402,17 +402,6 @@ section {
     flex-direction: column;
     position: relative;
 
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 24px;
-      bottom: 24px;
-      left: 124px;
-      width: 1px;
-      background-color: #689f63;
-    }
-
     .slot {
       display: flex;
       flex-direction: row;
@@ -434,6 +423,17 @@ section {
         margin: 4px 0px 0px 20px;
         background-color: #2e2e2e;
         border-radius: 8px;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 24px;
+          bottom: -16px;
+          left: -26px;
+          width: 1px;
+          background-color: #689f63;
+        }
 
         &::after {
           position: absolute;
@@ -475,6 +475,7 @@ section {
           text-decoration: none;
           &:hover {
             text-decoration: none;
+            box-shadow: 0 0 0 0 transparent;
           }
         }
 
@@ -490,11 +491,53 @@ section {
             }
           }
         }
+      }
+      
+      &.past {
+        opacity: 0.5;
+        .info {
+          &::before {
+            background-color: #4b4b4b;
+          }
+        }
+      }
 
+      &.current {
+        .info {
+          z-index: 1;
+          box-shadow: 0 0 6px 0px rgb(104, 159, 99);
+          &::after {
+            box-shadow: 0 0 0 0 rgb(104, 159, 99);
+	          transform: scale(1);
+	          animation: pulse 2s infinite;
+          }
+        }
+      }
+
+      &:last-child {
+        .info {
+          &::before {
+            display: none;
+          }
+        }
       }
     }
-    
   }
+}
+
+@keyframes pulse {
+	0% {
+    background-color: rgb(104, 159, 99);
+		box-shadow: 0 0 0 0 rgba(104, 159, 99, 0.7);
+	}
+	70% {
+    background-color: rgb(34, 37, 42);
+		box-shadow: 0 0 0 10px rgba(104, 159, 99, 0);
+	}
+	100% {
+    background-color: rgb(104, 159, 99);
+		box-shadow: 0 0 0 0 rgba(104, 159, 99, 0);
+	}
 }
 
 #talks {
@@ -502,6 +545,9 @@ section {
   max-width: 800px;
   > .row {
     padding-top: 60px;
+  }
+  a.back-to-schedule {
+    display: none;
   }
   hr {
     margin-top: 60px;
@@ -628,5 +674,51 @@ section {
     overflow-x: hidden;
     position: relative;
     width: 100%;
+  }
+
+  #talks {
+    a.back-to-schedule {
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+
+  #schedule {
+    .schedule-slots {
+      &::before {
+        width: 0px;
+      }
+
+      .slot {
+        flex-direction: column-reverse;
+        padding: 16px 8px;
+        margin: 0px;
+        
+        .timeslot {
+          padding: 0px;
+          margin: -32px 0px 0px 16px;
+          font-size: 0.8rem;
+          z-index: 2;
+        }
+        
+        .info {
+          padding: 16px 16px 48px 16px;
+          margin: 0px;
+
+          &::after {
+            top: -12px;
+            left: -12px;
+          }
+
+          .title {
+            padding: 0px !important;
+          }
+
+          .author {
+            padding: 0px !important;
+          }
+        }
+      }
+    }
   }
 }

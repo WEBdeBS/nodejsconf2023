@@ -69,6 +69,7 @@ permalink: '/'
     {%- for talk in collections.talks -%}
     <div class="row" id="{{ talk.url | replace("/", "_")  }}">
       <div class="col-12">
+        <a class="back-to-schedule" href="#schedule">&laquo; Back to schedule</a>
         <h3>{{ talk.data.title }}</h3>
         <div class="talk-topics mb-4 ">{{ talk.data.topics | safe }}</div>
         <div class="talk-abstract mb-4">
