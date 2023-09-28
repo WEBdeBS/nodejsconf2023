@@ -1,11 +1,14 @@
 let bootstrap = require('bootstrap')
 
-const CONF_DATE = new Date('2023-09-30 00:00:00')
-const NOW = new Date()
+const CONF = {
+  start: new Date('2023-09-30 07:00:00'),
+  end: new Date('2023-09-30 22:00:00'),
+}
+
+const mockDate = localStorage.getItem('NOW')
+window.NOW = mockDate !== undefined ? new Date(mockDate) : new Date()
 
 function initMap() {
-  console.log('initMap')
-
   const myLatLng = { lat: 45.4640236, lng: 10.5340366 }
   const map = new google.maps.Map(document.getElementById('map-venue'), {
     zoom: 12,
@@ -54,6 +57,45 @@ function initMap() {
 
 window.initMap = initMap
 
+function getDateFromTime(time) {
+  const [hours, minutes] = time.split(':')
+  return new Date(CONF.start).setHours(Number(hours), Number(minutes))
+}
+
+function refreshSlotStatus(slot, [startDate, endDate], now) {
+  slot.classList.remove('current')
+  slot.classList.remove('future')
+  slot.classList.remove('past')
+
+  if (startDate <= now && now <= endDate) {
+    slot.classList.add('current')
+  } else if (now < endDate) {
+    slot.classList.add('future')
+  } else if (startDate < now) {
+    slot.classList.add('past')
+  }
+}
+
+function refreshScheduleStatus(now) {
+  const timeslots = document.querySelectorAll('.timeslot')
+
+  timeslots.forEach(timeslot => {
+    const [startTime, endTime] = timeslot.innerHTML.split(' - ')
+    const startDate = getDateFromTime(startTime)
+    const endDate = getDateFromTime(endTime)
+
+    const slot = timeslot.parentElement
+
+    refreshSlotStatus(slot, [startDate, endDate], now)
+  })
+}
+
+function scrollToCurrentSlot() {
+  document
+    .querySelector('.slot.current')
+    ?.scrollIntoView({ block: 'start', inline: 'nearest' })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.sponsor-level').forEach(level => {
     const sponsors = Array.from(level.querySelectorAll('.sponsor')).sort(
@@ -63,23 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
     sponsors.forEach(s => level.appendChild(s))
   })
 
-  document.querySelectorAll('.timeslot').forEach(timeslot => {
-    const [startTime, endTime] = timeslot.innerHTML.split(' - ')
-
-    // const [startHours, startMinutes] = startTime.split(':')
-    // const startDate = (new Date()).setHours(Number(startHours), Number(startMinutes))
-
-    const [endHours, endMinutes] = endTime.split(':')
-    const endDate = new Date(CONF_DATE).setHours(
-      Number(endHours),
-      Number(endMinutes),
-    )
-
-    const slot = timeslot.parentElement
-    if (NOW < endDate) {
-      slot.classList.add('future')
-    } else {
-      slot.classList.add('past')
-    }
-  })
+  if (CONF.start <= window.NOW && window.NOW <= CONF.end) {
+    setInterval(() => refreshScheduleStatus(window.NOW), 10_000)
+    refreshScheduleStatus(window.NOW)
+    scrollToCurrentSlot()
+  }
 })
