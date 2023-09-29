@@ -9,7 +9,7 @@ const mockDate = localStorage.getItem('NOW')
 window.NOW = mockDate !== undefined ? new Date(mockDate) : new Date()
 
 function initMap() {
-  const myLatLng = { lat: 45.4640236, lng: 10.5340366 }
+  const myLatLng = { lat: 45.46400843923839, lng: 10.536220887547774 }
   const map = new google.maps.Map(document.getElementById('map-venue'), {
     zoom: 12,
     mapId: 'debe6a4b65bb50c1',
@@ -43,7 +43,7 @@ function initMap() {
   const marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: 'Googleplex (CodexWorld)',
+    title: 'Hotel Desenzano',
   })
 
   // Marker click event: open info window
