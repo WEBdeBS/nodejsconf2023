@@ -110,24 +110,6 @@ permalink: '/'
     {%- endfor -%}
   </section>
 
-  <section id="sponsorship" class="mb-24">
-    {% renderFile "./src/contents/sponsor.md" %}
-    <div class="row">
-      {%- for post in collections.sponsor_packages -%}
-        <div class="col-12 col-md-6 col-lg-3 g-4">
-          <div class="p-4 h-100 price-card">
-            <h3 class="mb-0">{{ post.data.title }}</h3>
-            <div class="price">
-              <div class="fs-3">{{ post.data.price }} &euro;</div>
-            </div>
-            <hr>
-              {{ post.templateContent | safe }} 
-            </div>
-          </div>
-        {%- endfor -%}
-      </div>
-    </section>
-
     <section id="sponsors">
       {% renderFile "./src/contents/sponsors.md" %}
       <div id="sponsors-platinum" class="sponsor-level mb-4">
@@ -169,9 +151,6 @@ permalink: '/'
             </div>
           </a>
         {%- endfor -%}
-      </div>
-      <div class="mt-24">
-        <a class="link-button" href="mailto:info@webdebs.org?subject=Sponsorship request">Become a sponsor</a>
       </div>
     </section>
 
